@@ -27,7 +27,7 @@ Com as dependencias baixadas, agora é possível rodar o programa contido em `in
 
 ```bash
 # Rodando o programa principal
-$ yarn start
+$ yarn dev
 ```
 
 O projeto também conta com rotinas de testes que utilizam as dependências _chai_ e _mocha_. Para rodar os testes utilize o comando:
@@ -35,6 +35,13 @@ O projeto também conta com rotinas de testes que utilizam as dependências _cha
 ```bash
 # Rodando testes
 $ yarn test
+```
+
+Para criar uma build do projeto em JS comum utilize o comando:
+
+```bash
+# Criando build de Produção e executando o index.js
+$ yarn start
 ```
 
 ## Tecnologias
