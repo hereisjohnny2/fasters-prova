@@ -4,7 +4,9 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "start": "yarn ts-node -T src/index.ts",
+        "dev": "yarn ts-node -T src/index.ts",
+        "build": "yarn tsc",
+        "start": "yarn build && node build/index.js",
         "test": "mocha -r ts-node/register src/test/*.spec.ts"
     },
     "dependencies": {
