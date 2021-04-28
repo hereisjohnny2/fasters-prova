@@ -1,7 +1,14 @@
 import { foo_letters } from "../data/wordRules";
 
 export const isPrep = (word: string): boolean => {
-  /* if (word.length !== 4) return false; */
+  if (!word.includes('l')) return false;
+  if (!foo_letters.includes(word[word.length - 1])) return false;
+
+  return true;
+}
+
+export const isPrepWithFourLetterRestriction = (word: string): boolean => {
+  if (word.length !== 4) return false;
   if (!word.includes('l')) return false;
   if (!foo_letters.includes(word[word.length - 1])) return false;
 

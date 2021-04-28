@@ -1,4 +1,4 @@
-import { isBeautifulNumber, isFirstPersonVerb, isPrep, isVerb } from "./grammaticalRules";
+import { isBeautifulNumber, isFirstPersonVerb, isPrep, isPrepWithFourLetterRestriction, isVerb } from "./grammaticalRules";
 import { convertToBase10 } from "./numberConversion";
 
 // Perguntar ao bruno se tem algo errado com essa função?
@@ -7,6 +7,15 @@ export const countPreps = (sentence: string): number => {
 
   const wordsArray = sentence.split(" ");
   const prepositionsArray = wordsArray.filter(word => isPrep(word));
+
+  return prepositionsArray.length;
+}
+
+export const countPrepsWithFourLettersRestriction = (sentence: string): number => {
+  if (sentence.length === 0) return 0;
+
+  const wordsArray = sentence.split(" ");
+  const prepositionsArray = wordsArray.filter(word => isPrepWithFourLetterRestriction(word));
 
   return prepositionsArray.length;
 }
